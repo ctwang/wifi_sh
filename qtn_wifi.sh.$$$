@@ -1,7 +1,7 @@
 #########################################################################
-# Date		: 10/31/2012
-# version number: 12
-# 	Added dmesg -c commands so the commands can show output on a telnet window as well
+# Date		: 11/05/2012
+# version number: 13
+# 	mac filter
 
 #########################################################################
 #List of Functions/Usage:

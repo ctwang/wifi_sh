@@ -1,13 +1,13 @@
 #########################################################################
-# Date		: 11/05/2012
-# version number: 13
-# 	mac filter
+# Date		: 11/21/2012
+# version number: 14
+# 	mac filter control
 
 #########################################################################
 #List of Functions/Usage:
 #wifi.sh cwwave [channel]   ./qtn_wifi_10.sh cwwave 36 
 #wifi.sh cwwaveStop         ./qtn_wifi_10.sh cwwaveStop
-#wifi.sh rxMode [channel] [bandwidth] [ctl sideband][ANTENNA][protocol] [mcs index/data rate] ./qtn_wifi_10.sh rxMode 36 40 1 4 n 2
+#wifi.sh rxMode [channel] [bandwidth] [ctl sideband][ANTENNA][protocol] [mcs index/data rate] ./qtn_wifi_10.sh rxMode 38 40 1 4 n 2
 #wifi.sh stopRxMode         ./qtn_wifi_10.sh stopRxMode 
 #wifi.sh rxMeasure          ./qtn_wifi_11.sh rxMeasure
 #wifi.sh rxPER [channel] [bandwidth] [ctl sideband][ANTENNA] [protocol] [mcs index/data rate] ./qtn_wifi_11.sh rxPER 38 40 -1 4 n 3 
@@ -163,7 +163,7 @@ wifiRxMode()
     #Code goes here
     #Do Nothing for wifiRxMode
 
-    echo "calcmd 39 0 16 0 1 0 2 00 17 34 51 3 68 85 4 2" > /sys/devices/qdrv
+    echo "calcmd 39 0 16 0 1 0 2 00 17 34 51 3 68 85 4 2" > /sys/devices/qdrv/control
     #Above command MUST be issued before issuing set_test_mode
 
     channel=$1
